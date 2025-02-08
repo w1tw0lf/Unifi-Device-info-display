@@ -26,7 +26,7 @@ Use [AP](https://github.com/w1tw0lf/Unifi-Device-info-display/blob/main/AP%20car
 
 Replace 'AP name' with the name off your sensor for the AP
 
-### Picture Icon
+### 3. Picture Icon
 
 To get an icon to display, add the png files in [PNG](https://github.com/w1tw0lf/Unifi-Device-info-display/tree/main/Entity%20Pictures) to config/www/unifi icons/. Then create config/customize.yaml.
 
