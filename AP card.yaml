@@ -1,0 +1,123 @@
+type: entities
+entities:
+  - type: custom:multiple-entity-row
+    entity: sensor.*AP name*
+    name: Closet AP
+    show_entity_picture: true
+    show_state: false
+    secondary_info:
+      entity: sensor.*AP name*
+      name: " "
+    entities:
+      - attribute: cpu
+        name: CPU
+      - attribute: ram
+        name: RAM
+      - icon: mdi:restart
+        tap_action:
+          action: call-service
+          confirmation: true
+          service: shell_command.reboot_*AP name*
+  - type: custom:multiple-entity-row
+    entity: sensor.*AP name*
+    icon: mdi:devices
+    name: " "
+    show_state: false
+    secondary_info:
+      entity: sensor.*AP name*
+      attribute: clients
+      name: " "
+    entities:
+      - attribute: clients_wifi0
+        name: 2.4GhZ
+      - attribute: clients_wifi1
+        name: 5GhZ
+      - attribute: guests
+        name: Guests
+  - type: custom:multiple-entity-row
+    entity: sensor.*AP name*
+    name: " "
+    icon: mdi:percent-outline
+    show_state: false
+    secondary_info:
+      attribute: score
+      name: " "
+      unit: "% satisfaction"
+    entities:
+      - attribute: score_wifi0
+        name: 2.4gHz
+        unit: "%"
+        tap_action:
+          action: none
+      - attribute: score_wifi1
+        name: 5gHz
+        unit: "%"
+        tap_action:
+          action: none
+    card_mod:
+      style: |
+        ha-card {
+          border-radius: 0px;
+          --ha-card-border-width: 0px;
+          } 
+  - type: custom:mini-graph-card
+    entities:
+      - entity: sensor.*AP name*
+        attribute: score
+    group: true
+    font_size: 85
+    hours_to_show: 24
+    show:
+      icon: false
+      graph: false
+      name: false
+      state: false
+      extrema: true
+      average: true
+    card_mod:
+      style: |
+        ha-card {
+          border-radius: 0px;
+          --ha-card-border-width: 0px;
+          } 
+  - type: custom:multiple-entity-row
+    entity: sensor.*AP name*
+    name: Activity
+    show_state: false
+    icon: mdi:arrow-up-down
+    secondary_info:
+      entity: sensor.*AP name*
+      attribute: activity
+      name: " "
+    entities:
+      - entity: sensor.*AP name*
+        attribute: firmware_version
+        name: Version
+      - entity: sensor.*AP name*
+        attribute: update
+        name: New Update
+    card_mod:
+      style: |
+        ha-card {
+          border-radius: 0px;
+          --ha-card-border-width: 0px;
+          } 
+  - type: custom:mini-graph-card
+    entities:
+      - entity: sensor.*AP name*
+        attribute: activity
+    group: true
+    hours_to_show: 24
+    line_width: 3
+    points_per_hour: 15
+    show:
+      icon: false
+      name: false
+      state: false
+      labels: true
+    card_mod:
+      style: |
+        ha-card {
+          border-radius: 0px;
+          --ha-card-border-width: 0px;
+          } 
