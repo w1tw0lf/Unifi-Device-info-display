@@ -10,9 +10,15 @@ This is a place to share ideas on how to create cards for the integration [Unifi
 
 ### Switch card
 
+![image](https://github.com/user-attachments/assets/7e3f796e-a40a-48b6-8042-4d4f3ee4b97f)
+
+
 Replace 'switch name' with the name off your sensor for the switch
 
 ### 2. AP Card
+
+![image](https://github.com/user-attachments/assets/ce689902-e7d4-4d9a-8c6d-27bb78a62a57)
+
 
 Replace 'AP name' with the name off your sensor for the AP
 
