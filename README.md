@@ -26,6 +26,25 @@ Use [AP](https://github.com/w1tw0lf/Unifi-Device-info-display/blob/main/AP%20car
 
 Replace 'AP name' with the name off your sensor for the AP
 
+### Picture Icon
+
+To get an icon to display, add the png files in [PNG](https://github.com/w1tw0lf/Unifi-Device-info-display/tree/main/Entity%20Pictures) to config/www/unifi icons/. Then create config/customize.yaml.
+
+In the file add the following:
+```
+sensor.*name*:
+  entity_picture: /local/unifi icons/*.png
+```
+Replace *name* and *.png with as needed. Do so for each devices.
+
+Add to configuration.yaml
+```
+homeassistant:
+  customize: !include customize.yaml
+```  
+Reboot and the device should have a picture displayed as an icon.
+
+
 ## Contributing
 
 Contributions are welcome! Feel free to open issues or submit pull requests to improve this integration.
