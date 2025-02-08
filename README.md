@@ -10,7 +10,7 @@ You will need the following 2 cards added via HACS
 
 [lovelace-card-mod](https://github.com/thomasloven/lovelace-card-mod)
 
-### Switch card
+### 1. Switch card
 
 ![image](https://github.com/user-attachments/assets/7e3f796e-a40a-48b6-8042-4d4f3ee4b97f)
 
