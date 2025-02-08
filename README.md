@@ -5,6 +5,7 @@ This is a place to share ideas on how to create cards for the integration [Unifi
 ### Requirements
 
 [lovelace-multiple-entity-row](https://github.com/benct/lovelace-multiple-entity-row)
+
 [lovelace-card-mod](https://github.com/thomasloven/lovelace-card-mod)
 
 ### Switch card
