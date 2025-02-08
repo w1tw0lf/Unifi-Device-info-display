@@ -15,6 +15,7 @@ You will need the following 2 cards added via HACS
 ![image](https://github.com/user-attachments/assets/7e3f796e-a40a-48b6-8042-4d4f3ee4b97f)
 
 Use [switch](https://github.com/w1tw0lf/Unifi-Device-info-display/blob/main/Switch%20card.yaml)
+
 Replace 'switch name' with the name off your sensor for the switch
 
 ### 2. AP Card
@@ -22,6 +23,7 @@ Replace 'switch name' with the name off your sensor for the switch
 ![image](https://github.com/user-attachments/assets/ce689902-e7d4-4d9a-8c6d-27bb78a62a57)
 
 Use [AP](https://github.com/w1tw0lf/Unifi-Device-info-display/blob/main/AP%20card.yaml)
+
 Replace 'AP name' with the name off your sensor for the AP
 
 ## Contributing
