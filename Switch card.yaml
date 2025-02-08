@@ -1,0 +1,89 @@
+type: entities
+entities:
+  - type: custom:multiple-entity-row
+    entity: sensor.*switch name*
+    name: 48 Port Switch
+    show_entity_picture: true
+    show_state: false
+    secondary_info:
+      entity: sensor.*switch name*
+      name: " "
+    entities:
+      - attribute: cpu
+        name: CPU
+      - attribute: ram
+        name: RAM
+      - attribute: total_used_power
+        name: POE
+      - attribute: current_temperature
+        name: Temp
+      - icon: mdi:restart
+        tap_action:
+          action: call-service
+          confirmation: true
+          service: shell_command.reboot_unifi_24port
+  - type: custom:multiple-entity-row
+    entity: sensor.*switch name*
+    icon: mdi:devices
+    name: " "
+    show_state: false
+    secondary_info:
+      entity: sensor.*switch name*
+      attribute: ports_used
+      name: " "
+    entities:
+      - attribute: ports_user
+        name: Users
+      - attribute: ports_guest
+        name: Guests
+    group: true
+    font_size: 85
+    hours_to_show: 24
+    show:
+      icon: false
+      graph: false
+      name: false
+      state: false
+      extrema: true
+      average: true
+    card_mod:
+      style: |
+        ha-card {
+          border-radius: 0px;
+          box-shadow: none;
+          } 
+  - type: custom:multiple-entity-row
+    entity: sensor.*switch name*
+    name: " "
+    show_state: false
+    icon: mdi:ip-network-outline
+    secondary_info:
+      entity: sensor.*switch name*
+      name: " "
+      attribute: ip_address
+    entities:
+      - entity: sensor.*switch name*
+        attribute: firmware_version
+        name: Version
+      - entity: sensor.*switch name*
+        attribute: update
+        name: New Update
+  - type: custom:mini-graph-card
+    entities:
+      - entity: sensor.*switch name*
+        attribute: activity
+    group: true
+    hours_to_show: 24
+    line_width: 3
+    points_per_hour: 15
+    show:
+      icon: false
+      name: false
+      state: false
+      labels: true
+    card_mod:
+      style: |
+        ha-card {
+          border-radius: 0px;
+          --ha-card-border-width: 0px;
+          } 
